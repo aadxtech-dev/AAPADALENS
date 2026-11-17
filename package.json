@@ -1,0 +1,14 @@
+{
+  "name": "aapadalens",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:phone": "node server.js --phone"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@google/genai": "^3.0.0"
+  }
+}

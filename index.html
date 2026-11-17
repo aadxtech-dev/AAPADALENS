@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1f33">
+    <meta name="description" content="AapadaLens is an Odisha-first cyclone preparedness and shelter management app.">
+    <title>AapadaLens — Prepare Better. Protect More.</title>
+    <link rel="icon" type="image/png" href="aapadalens-logo.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modules.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" data-nav="overview" aria-label="AapadaLens home">
+          <img class="brand-mark" src="aapadalens-logo.png" alt="">
+          <span class="brand-copy"><strong>AapadaLens</strong><small>Prepare Better. Protect More.</small></span>
+        </a>
+        <div class="pilot-label"><span class="live-dot"></span><span data-i18n="localApp">LOCAL APP · ODISHA PILOT</span></div>
+        <div class="nav-caption" data-i18n="workspace">WORKSPACE</div>
+        <nav class="primary-nav">
+          <button class="nav-link active" data-nav="overview"><span>⌂</span><span data-i18n="overview">Overview</span></button>
+          <button class="nav-link" data-nav="map"><span>◎</span><span data-i18n="disasterMap">Disaster map</span></button>
+          <button class="nav-link" data-nav="shelters"><span>⌂</span><span data-i18n="shelters">Shelters</span></button>
+          <button class="nav-link" data-nav="nearby"><span>➤</span><span data-i18n="navNearby">Nearby shelters</span></button>
+          <button class="nav-link" data-nav="assessment"><span>◐</span><span data-i18n="navAssessment">Shelter readiness</span></button>
+          <button class="nav-link" data-nav="gaps"><span>▦</span><span data-i18n="navGaps">Resource gaps</span></button>
+          <button class="nav-link" data-nav="weather"><span>☁</span><span data-i18n="navWeather">Weather</span></button>
+          <button class="nav-link" data-nav="compare"><span>⇄</span><span data-i18n="navCompare">Compare shelters</span></button>
+          <button class="nav-link" data-nav="plan"><span>▤</span><span data-i18n="navPlan">Resource planning</span></button>
+          <button class="nav-link" data-nav="triage"><span>⚑</span><span data-i18n="navTriage">Report triage</span></button>
+          <button class="nav-link" data-nav="translate"><span>文</span><span data-i18n="navTranslate">Translate</span></button>
+          <button class="nav-link" data-nav="alerts"><span>◉</span><span data-i18n="alerts">Official alerts</span></button>
+          <button class="nav-link" data-nav="assistant"><span>✦</span><span data-i18n="assistant">Preparedness guide</span></button>
+          <div class="nav-caption secondary-caption" data-i18n="preparedness">PREPAREDNESS</div>
+          <button class="nav-link" data-nav="hazards"><span>⚠</span><span data-i18n="navHazards">Hazard guides</span></button>
+          <button class="nav-link" data-nav="readiness"><span>◔</span><span data-i18n="readiness">Readiness</span></button>
+          <button class="nav-link" data-nav="simulator"><span>⌁</span><span data-i18n="simulator">What-if simulator</span></button>
+          <button class="nav-link" data-nav="kit"><span>▣</span><span data-i18n="emergencyKit">Emergency kit</span></button>
+          <button class="nav-link" data-nav="family"><span>♡</span><span data-i18n="familySafety">Family safety</span></button>
+          <button class="nav-link" data-nav="reports"><span>▤</span><span data-i18n="reports">Reports</span></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="offline-card"><span class="offline-icon">⌁</span><div><strong data-i18n="localRecords">Local records</strong><small data-i18n="deviceOnly">Saved on this device</small></div><span class="status-dot"></span></div>
+          <button class="nav-link settings-link" data-nav="settings"><span>⚙</span><span data-i18n="settings">Settings</span></button>
+          <div class="profile-row"><span class="avatar">S</span><span><strong data-i18n="studentInnovator">Local user</strong><small data-i18n="guestMode">No account · local storage</small></span><span class="profile-more">···</span></div>
+        </div>
+      </aside>
+      <div class="main-column">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="menuToggle" aria-label="Open menu">☰</button>
+          <label class="global-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search name, district or address…" aria-label="Search name, district or address"><kbd>⌘ K</kbd></label>
+          <div class="topbar-actions">
+            <label class="location-select"><span aria-hidden="true">⌖</span><input id="locationInput" placeholder="Set district / location" aria-label="Filter by district or location"><span class="chevron">⌄</span></label>
+            <span class="connection"><i></i><span data-i18n="localOnly">On this device</span></span>
+            <label class="language-select" aria-label="Language"><span>文</span><select id="languageSelect"><option value="en">EN</option><option value="or">ଓଡ଼ିଆ</option><option value="hi">हिन्दी</option></select></label>
+            <button class="icon-button theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">☼</button>
+            <button class="emergency-button" data-nav="emergency"><span>＋</span><span data-i18n="emergencyHelp">Emergency help</span></button>
+          </div>
+        </header>
+        <main id="appContent" tabindex="-1"></main>
+        <footer class="app-footer"><span data-i18n="footerNotice">Records are stored on this device · Not a live emergency service</span><span>© AapadaLens</span></footer>
+      </div>
+    </div>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+      <button class="mobile-nav-link active" data-nav="overview"><span>⌂</span><small data-i18n="home">Home</small></button>
+      <button class="mobile-nav-link" data-nav="map"><span>◎</span><small data-i18n="map">Map</small></button>
+      <button class="mobile-nav-link mobile-nav-center" data-nav="assistant" aria-label="Preparedness guide"><span>✦</span></button>
+      <button class="mobile-nav-link" data-nav="alerts"><span>◉</span><small data-i18n="alerts">Alerts</small></button>
+      <button class="mobile-nav-link" id="moreToggle"><span>•••</span><small data-i18n="more">More</small></button>
+    </nav>
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close icon-button" id="modalClose" aria-label="Close dialog">×</button>
+        <div id="modalContent"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="intro" id="intro" hidden></div>
+    <script src="phase1.js"></script>
+    <script src="phase2.js"></script>
+    <script src="phase3.js"></script>
+    <script src="phase4.js"></script>
+    <script src="phase6.js"></script>
+    <script src="phase5.js"></script>
+    <script src="modules.js"></script>
+    <script src="mod-shelters.js"></script>
+    <script src="mod-cyclone.js"></script>
+    <script src="mod-safety.js"></script>
+    <script src="vendor/lottie/lottie_svg.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
